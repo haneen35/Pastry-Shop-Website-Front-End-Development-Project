@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Pacifico&display=swap');
+body {
+    background-color: rgb(226, 203, 175);
+    font-family: "Pacifico", cursive;
+    color: rgb(145, 93, 25);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('imgs/pexels-leigh-patrick-14477-298217.jpg') no-repeat center center/cover;
+    /* Replace with the correct relative path to your image, e.g.: */
+    /* background: url('../imgs/pastries-bg.jpg') no-repeat center center/cover; */
+    filter: blur(8px) brightness(0.7);
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 10px 10px 10px;
+    background: #fff8ef;
+    border-radius: 18px;
+    box-shadow: 0 0 12px rgb(0 0 0 / 0.08);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+    color: rgb(145, 93, 25);
+    font-family: "Pacifico", cursive;
+}
+
+form {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+form input[type="text"] {
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid #d1bfa3;
+    font-size: 1rem;
+    width: 180px;
+    background: #f7e8d0;
+    color: rgb(99, 61, 5);
+    font-family: "Pacifico", cursive;
+    align-items: center;
+}
+
+form button {
+    font-family: "Pacifico", cursive;
+    color: black;
+    background-color: burlywood;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: rgb(150, 115, 70);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+#product-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+#product-list li {
+    background-color: beige;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+    padding: 15px 10px 20px 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.2s;
+    margin-bottom: 10px;
+}
+
+#product-list li:hover {
+    transform: scale(1.04);
+}
+
+#product-list img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#product-list h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px 0;
+    font-family: "Pacifico", cursive;
+}
+
+#product-list p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: rgb(99, 61, 5);
+}
+
+#product-list button {
+    font-family: "Pacifico", cursive;
+    color: black;
+    background-color: burlywood;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 0 4px;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#product-list button:hover {
+    background-color: rgb(150, 115, 70);
+    color: #fff;
+    transform: scale(1.07);
+}
+
+footer {
+    background-color: rgb(145, 93, 25);
+    color: rgb(212, 184, 150);
+    text-align: center;
+    padding: 20px 10px;
+    font-family: "Pacifico", cursive;
+    font-size: 25px;
+    margin-top: 40px;
+    border-radius: 0 0 18px 18px;
+}
+
+/* Optional: make content more readable */
+main, header, footer, section, form {
+    position: relative;
+    z-index: 2;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em auto;
+    max-width: 800px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}

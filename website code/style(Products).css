@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Pacifico&display=swap');
+/* مجموعة خطوط */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: 'Georgia', serif; */
+        }
+body{
+  font-family:'Poppins', sans-serif;   
+  /* كدا أنا حددت الخط الأساسي بتاعي وحطيت احتياطي */
+    margin:0;
+    padding: 0;
+    /* كدا شلت أي حاجات زيادة في الجناب */
+}
+.container{
+    width:900px;
+    max-width: 90vw;
+    /* دا بيغيرلي في المسافة بين العنوان وعربيتي بحيث انه ميعديش 90 في المية من عرض الشاشة */
+    margin:auto;
+    /* يخلي منتاجاتي في النص بالظبط لا سنة يمين ولا سنة شمال */
+    text-align:center;
+    /* عشان عنوان الكارت الجميل بتاعي يبقلى في النص بالظبط */
+    padding-top:10px;
+     transition: transform .5s;
+    /* عشان نبقى سريعسن كدا و مناخدش وقت اومال */
+}
+svg{
+    width:30px;
+    height:auto;
+    /* حجم عربيتي عشان تكون نونو وجميلة زيي كدا */
+}
+/* header{
+    display:flex;
+    align-items: 6889px;
+    justify-content:space-between;
+    /* المسافة بتاعة عربيتي الجميلة والتكست */
+    /* padding: 20px 0; */
+  /* المسافة فوق وتحت */
+ */
+header .icon-cart span{
+    position: relative;
+}
+.icon-cart{
+  cursor: pointer;
+}
+header .icon-cart span{
+display:flex;
+width:20px;
+height:20px;
+background-color:red;
+justify-content: center;
+align-items: center;
+/* يبقى في النص افقي وراسي */
+color:#fff;
+border-radius:50%;
+position:absolute;
+top:50%;  
+right: 92.5%;  
+/* مكان دايرتي الكتكوتة */
+}
+/* ///// */
+
+html{
+
+    scroll-behavior: smooth;
+    background-color: burlywood;
+    font-size: 16px;
+    color: rgb(145, 93, 25);
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+    width: 100%;   /* ✅ يخلي الهيدر يمتد بعرض الشاشة */
+    left: 0;
+    right: 0;
+}
+ .logo {
+          font-family: "pacifico" , cursive;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #5e2a00;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Navigation Styles */
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-link {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: larger;
+            font-family: "pacifico" , cursive;
+            transition: color 0.3s;
+            position: relative;
+            /* Add these new properties */
+            display: inline-block;
+            padding-bottom: 5px; 
+            /* Space for the underline */
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #a67c52; /* Color of your underline */
+            transition: width 0.3s ease; /* Animation duration and timing */
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link:hover {
+            color: #a67c52;
+        }
+
+        /* Dropdown Menu Styles */
+
+        .dropdown {
+            font-family: "pacifico" , cursive;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown-btn {
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            font-size: larger;
+            padding: 0;
+            color: #333;
+            transition: color 0.3s;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px; /* Space for the underline */
+
+        }
+
+        .dropdown-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #a67c52;
+            transition: width 0.3s ease;
+        }
+
+        .dropdown-btn:hover::after {
+            width: 100%;
+        }
+
+        .dropdown-btn:hover {
+            color: #a67c52;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%; /* Positions dropdown BELOW the "More" link */
+            right: 0;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            border: 1px solid #e0e0e0; /* Light gray border */
+            z-index: 1000; /* Ensures it stays above other elements */
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f8f5f0;
+        }
+
+        /* Show dropdown when active */
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+
+.first img {
+     
+    display: block;
+    margin: auto;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    width: 60%; 
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+  
+}
+
+.first img:hover{
+    transform: scale(1.05);
+}
+
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 per row */
+  gap: 30px;
+  justify-items: center;
+  justify-content: center; /* Add this line to center the grid */
+ 
+}
+
+.product-list li {
+  background-color: beige;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+  padding: 15px;
+  width: 300px;
+  max-width: 90vw;
+  text-align: center;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-list li:hover {
+  transform: scale(1.03);
+}
+
+.product-list img{
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+}
+
+
+
+.add-to-cart{
+font-family:"Pacifico", cursive;
+color: black;
+background-color: burlywood;
+border: none;
+padding: 5%;
+border-radius: 7px;
+margin-top: 7%;
+cursor: pointer;
+transition: transform 0.4s ease;
+
+}
+
+button:hover{
+
+  background-color: rgb(150, 115, 70) ;
+   transform: scale(1.05);
+     
+} 
+
+
+
+footer {
+    align-items: center;
+    background-color: rgb(192, 129, 56);
+    color: rgb(212, 184, 150);
+    text-align: center;
+    padding: 20px 10px;
+    font-family: "Pacifico", cursive;
+    margin-top: 40px;
+
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+/* //// */
+.CartTab{
+  font-family:"Pacifico", cursive;
+    width:350px;
+    background-color: #353432;
+    color: #eee;
+    position:fixed;
+    /* بخلي الكارت ثابتة طول ما انا بطلع وانزل بالشاشة */
+    inset: 0 -400px 0 auto;
+    display:grid;
+    grid-template-rows:  70px 1fr 70px ;
+    /* هقسمها الجزء اللي فوق واللي  تحت والباقي لللي في النص */
+    transition: .5s;
+}
+body.showCart .CartTab{
+   inset: 0 0 0 auto;
+   /* مكان الكارت يبقى فين ثابت من اليمين */
+}
+/* body.container .CartTab{
+  transform:translateX(-250px)
+} */
+.CartTab h1{
+  padding:20px;
+  margin:0;
+  font-weight: 300;
+  /* خط خفيف */
+}
+.CartTab .btn{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  /* عشان اخليهم قد بعض في العرض */
+  
+}
+.listCart{
+  overflow-y: auto;
+  /* من غيرها مش هنخلص في الصفحة دي */
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.CartTab .btn button{
+  font-family:"Pacifico", cursive;
+  background-color: bisque;
+  border: none;
+  font-weight: 700;
+  /* الخط الجميل بتاع بوكساتي القمر */
+  cursor: pointer;
+}
+.CartTab .btn button:hover{
+  background-color: burlywood;
+}
+.CartTab .btn .Close{
+  font-family:"Pacifico", cursive;
+  background-color: red;
+}
+.CartTab .btn .Close:hover{
+  background-color: brown;
+}
+ .clearcart{
+  font-size: 20px;
+  font-family:"Pacifico", cursive;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: lightsalmon   ;
+}
+.clearcart:hover{
+
+background-color:coral  ;
+transform: (1.001);
+}
+.CartTab .listCart .item img{
+  width:100px;
+  height: 100px;
+  /* حجم صوري العسل */
+} 
+.CartTab .listCart .item{
+  display:grid;
+  grid-template-columns: 70px 150px 50px 1fr;
+  gap:10px;
+  text-align: center;
+  align-items: center;
+  display: none;
+}
+/* .listCart .quantity span{
+display: inline-block;
+width: 25px;
+height: 25px;
+background-color: #eee;
+color: #555;
+border-radius:50%;
+cursor: pointer;
+} */
+.listCart .quantity span:nth-child(2){
+  background-color: transparent;
+  color:#eee;
+  /* التاني خلفية شفافة ونص بلون فاتح جميل */
+}
+.listCart .item:nth-child(even){
+  background-color: #eee1;
+}
+/* .listCart::-webkit-scrollbar{
+  width: 0;
+  لو عايزة اشيل السلايد بار 
+} */

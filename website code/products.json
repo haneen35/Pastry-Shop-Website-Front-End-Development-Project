@@ -1,0 +1,152 @@
+[
+    {
+      "id": 1,
+      "name": "Bolos Tradicionais",
+      "price": 365,
+      "image": "imgs/Bolos Tradicionais.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Red Velvet Dream Cake",
+      "price": 2260,
+      "image": "imgs/Red Velvet Dream Cake.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "mixed berry pie",
+      "price": 760,
+      "image": "imgs/mixed berry pie.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "orange cake",
+      "price": 499,
+      "image": "imgs/orangr cake.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Sourdough Brioche",
+      "price": 200,
+      "image": "imgs/Sourdough Brioche.jpeg"
+    },
+    {
+      "id": 6,
+      "name": "Tiramisu",
+      "price": 127,
+      "image": "imgs/Tiramisu.jpeg"
+    },
+    {
+      "id": 7,
+      "name": "Bomboloni Doughnuts",
+      "price": 69,
+      "image": "imgs/Bomboloni - Italian Doughnuts.jpeg"
+    },
+    {
+      "id": 8,
+      "name": "Mini Lemon Cheesecake",
+      "price": 89,
+      "image": "imgs/Mini Lemon Cheesecakes.jpeg"
+    },
+    {
+      "id": 9,
+      "name": "japanese pancakes",
+      "price": 99,
+      "image": "imgs/pancakes.jpeg"
+    },
+    {
+      "id": 10,
+      "name": "chocolate dream cake",
+      "price": 2790,
+      "image": "imgs/chocolate dream cake.jpeg"
+    },
+    {
+      "id": 11,
+      "name": "Japanese Cake Roll",
+      "price": 89,
+      "image": "imgs/Japanese Cake Roll.jpeg"
+    },
+    {
+      "id": 12,
+      "name": "Mini Coffee Cheesecakes",
+      "price": 115,
+      "image": "imgs/Delicious Mini Coffee Cheesecakes.jpeg"
+    },
+    {
+      "id": 13,
+      "name": "chocolate Eclairs",
+      "price": 45,
+      "image": "imgs/chocolate Eclairs.jpeg"
+    },
+    {
+      "id": 14,
+      "name": "Mixed Berry Tart",
+      "price": 299,
+      "image": "imgs/Mixed Berry Tart.jpeg"
+    },
+    {
+      "id": 15,
+      "name": "cinnamon roll",
+      "price": 110,
+      "image": "imgs/cinnamon rolls.jpeg"
+    },
+    {
+      "id": 16,
+      "name": "chocolate brownies",
+      "price": 289,
+      "image": "imgs/chocolate brownies.jpeg"
+    },
+    {
+      "id": 17,
+      "name": "chocolate croissante",
+      "price": 75,
+      "image": "imgs/chocolate croissante.jpeg"
+    },
+    {
+      "id": 18,
+      "name": "chocolate pretzels",
+      "price": 54,
+      "image": "imgs/chocolate pretzels.jpeg"
+    },
+    {
+      "id": 19,
+      "name": "chocolate cupcake",
+      "price": 67,
+      "image": "imgs/cupcakes.jpeg"
+    },
+    {
+      "id": 20,
+      "name": "mixed flavor macaron",
+      "price": 256,
+      "image": "imgs/macaron.jpeg"
+    },
+    {
+      "id": 21,
+      "name": "Chocolate Chip Cookies",
+      "price": 99,
+      "image": "imgs/Chocolate Chip Cookies.jpeg"
+    },
+    {
+      "id": 22,
+      "name": "Chocolate Chip Muffin",
+      "price": 85,
+      "image": "imgs/Chocolate Chip Muffin .jpeg"
+    },
+    {
+      "id": 23,
+      "name": "Cinnamon Donuts",
+      "price": 69,
+      "image": "imgs/Cinnamon Donuts.jpeg"
+    },
+    {
+      "id": 24,
+      "name": "Fluffy Banana Pancakes",
+      "price": 114,
+      "image": "imgs/Fluffy Banana Pancakes.jpeg"
+    },
+    {
+      "id": 25,
+      "name": "mille-feuille",
+      "price": 89,
+      "image": "imgs/mille-feuille.jpeg"
+    }
+  ]

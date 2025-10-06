@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="icon" href="imgs/food-icons11_89016.ico" />
+    <style>
+        html {
+            scroll-behavior: smooth; 
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #f8f5f0;
+            background-image: url('premium_photo-1725986663085-69be91a0c3af.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            /* opacity: 0.95; */
+            color: #333;
+            line-height: 1.6;
+
+        }
+        html, body {
+            height: 100%; /* Makes body fill the viewport */        
+        }
+        header {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #5e2a00;
+            text-decoration: none; /* Removes underline */
+            display: inline-block; /* Prevents layout shift */
+        }
+
+                                /*------------ Navigation Styles -------------*/
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-link {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: larger;
+            transition: color 0.3s;
+            position: relative;
+            /* Add these new properties */
+            display: inline-block;
+            padding-bottom: 5px; 
+            /* Space for the underline */
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #a67c52; /* Color of your underline */
+            transition: width 0.3s ease; /* Animation duration and timing */
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: #a67c52;
+        }
+
+        /* Dropdown Menu Styles */
+
+        .dropdown {
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown-btn {
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            font-size: larger;
+            padding: 0;
+            color: #333;
+            transition: color 0.3s;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px; /* Space for the underline */
+
+        }
+
+        .dropdown-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #a67c52;
+            transition: width 0.3s ease;
+        }
+
+        .dropdown-btn:hover::after {
+            width: 100%;
+        }
+
+        .dropdown-btn:hover {
+            color: #a67c52;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%; /* Positions dropdown BELOW the "More" link */
+            right: 0;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            border: 1px solid #e0e0e0; /* Light gray border */
+            z-index: 1000; /* Ensures it stays above other elements */
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f8f5f0;
+        }
+
+        /* Show dropdown when active */
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .about {
+            width: 55%;
+            background-color: #faebd7c9;
+            margin: 30px;
+            padding: 20px;
+            flex: 1;
+            border-radius: 30px;
+        }
+
+        .abt-p{
+            margin: 10px;
+        }
+
+        footer {
+            position:static;
+            bottom: 0;
+            /* width: 100%; */
+            background-color: rgb(171, 109, 75);
+            color: rgb(212, 184, 150);
+            text-align: center;
+            padding: 20px 10px;
+            font-family: "Pacifico", cursive;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html" class="logo">Pastry Delight</a>
+        <nav>
+            <a href="pastries.html" class="nav-link">Pastries</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-btn nav-link">More</a>
+                <div class="dropdown-content">
+                    <a href="home.html">Home</a>
+                    <a href="registeration.html">Register</a>
+                    <!-- Change this to Logout if user is logged in -->
+                    <!-- <a href="#">Logout</a> -->
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="about">
+        <!-- <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> -->
+        <h2>About Pastry Delight</h2>
+        <p class="abt-p">
+            At Pastry Delight, we craft exquisite pastries with passion and precision. Using only the finest ingredients—locally sourced butter, organic flour, and seasonal fruits—our creations blend traditional techniques with modern flair. From flaky croissants to decadent chocolate tortes, each bite tells a story of artistry and indulgence. Whether you’re celebrating a special occasion or savoring a quiet moment, our treats are designed to delight. Visit us and taste the difference love makes.
+        </p>
+        <p class="abt-p">
+            This website is a mockup project created by students for educational purposes. All images, branding, and content are fictional and used solely to demonstrate web design and development skills. No real transactions or services are offered.
+        </p>
+    </div>
+    <footer>
+        <p>
+            Contact: hello@pasrtydelight.com · +1 234-567-890
+
+        </p>
+      <p>123 Pastry Street — © 2025 Pastry Delight. All rights reserved.</p>
+      <p>thank you for visiting our store</p>
+    </footer>
+    <script>
+                                // Dropdown Menu Functionality
+
+        document.querySelector('.dropdown-btn').addEventListener('click', function() {
+                                // Toggle active class to show/hide dropdown
+            document.querySelector('.dropdown').classList.toggle('active');
+        });
+
+                                // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.dropdown')) {
+                document.querySelector('.dropdown').classList.remove('active');
+            }
+        });
+
+    </script>
+</body>
+</html>

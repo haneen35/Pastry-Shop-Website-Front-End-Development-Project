@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Pacifico&display=swap');
+body {
+    height: 100vh;
+    background-color: rgb(165, 124, 71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.container {
+    height: 500px;
+    width: 500px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 3px dashed #8f671d;
+}
+.login {
+    min-height: 350px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+img {
+    height: 100px;
+    width: fit-content;
+}
+.login input {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #b1acac;
+    background: #efededec;
+    box-shadow: 2px 2px 8px #dbd9d9bd;
+    border-bottom-width: 4px;
+    position: relative;
+    transition: 0.3s ease;
+}
+input {
+    font-weight: 600;
+    color: #333;
+    font-family: "Arial", sans-serif;
+}
+.login .email::placeholder,
+.login .password::placeholder {
+    font-weight: 600;
+}
+.login .email:focus, .login .password:focus {
+    outline: none;
+    border-bottom-color: rgb(150, 115, 70);
+    box-shadow: 2px 2px 15px rgb(150, 115, 70);
+}
+input[type = "button"] {
+    cursor: pointer;
+    background-color:#471f00;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 3px 3px rgba(33, 32, 32, 0.696);
+    transition: 0.3s ease;
+}
+input[type = "button"]:hover {
+    box-shadow: none;
+}
+.login p {
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    color: rgb(150, 115, 70);
+    transition: 0.3s ease;
+}
+.login p:hover {
+    text-decoration: underline;
+}
+.signUp-feild {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #471f00;;
+    color: #fff;
+    border-radius: 12px;
+    padding: 5px 10px;
+    height: 60px;
+    width: 70%;
+    box-shadow: 0 3px 3px rgba(33, 32, 32, 0.696);
+}
+.signUp-feild p {
+    margin-right: 5px;
+}
+.signUp-feild p:last-child {
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s ease;
+}
+.signUp-feild p:last-child::before {
+    content: "";
+    height: 2px;
+    width: 0;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -2px;
+    transition: 0.5s ease;
+}
+.signUp-feild p:last-child:hover::before {
+    width: 100%;
+}
+.input-feild span {
+    margin: 5px 0 0 3px;
+}
+.email-span-area, .password-span-area {
+    display: none;
+}
+.symbol {
+    display: inline-flex;
+    background-color: #b21926;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+.signUp-btn {
+    font-weight: 600;
+    color: white;
+}
+.alert {
+    color: #b21926;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.guest {
+    color: rgb(150, 115, 70);;
+    display: block;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    width: fit-content;
+     font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}

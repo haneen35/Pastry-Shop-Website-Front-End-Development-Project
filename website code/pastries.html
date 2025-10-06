@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><!--كان بيدعم العربي تقريبا-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--عشان ينفع مع شاشات التلفون -->
+   <title>pastry delight</title>
+   <link rel="icon" href="imgs/food-icons11_89016.ico" />
+    <link rel="stylesheet" href="style(Products).css"/><!-- كدا أنا ربطت الملف خلاص-->
+</head>
+<body>
+    <div class="container">
+     <header>
+        <div class="icon-cart">
+        <svg  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24 "><!-- رسم متجه وخداه كوبي من موقع ما -->
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+</svg>
+
+        <span>0</span><!--عشان أحسب الحاجات اللي عندي في الكارت-->
+</div>
+     </header>
+<!-- //////// -->
+ <header>
+        <a href="home.html"
+        class="logo">pastry delight</a>
+        <nav>
+            <a href="Pastries.html" class="nav-link">Pastries</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-btn nav-link">More</a>
+                <div class="dropdown-content">
+                    <a href="home.html">Home</a>
+                    <a href="registeration.html">Register</a>
+                    <!-- Change this to Logout if user is logged in -->
+                    <!-- <a href="#">Logout</a> -->
+                    <a href="admin.html">Admin</a>
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+<section class="first" style="text-align: center;">
+  <img src="imgs/Elegant Morning Treats.jpeg" alt="delight in every bite"/>
+  <div>
+    <ul class="product-list">
+      <!-- Products will be loaded here dynamically -->
+    </ul>
+  </div>
+</section>
+<footer>
+        <p>
+            Contact: hello@pasrtydelight.com · +1 234-567-890
+
+        </p>
+      <p>123 Pastry Street — © 2025 Pastry Delight. All rights reserved.</p>
+      <p>thank you for visiting our store</p>
+    </footer>
+
+
+    <!-- ///// -->
+    <div class="CartTab">
+        <h1> Shopping Cart</h1><!--عنواني الجميل زيي-->
+        <div class="listCart">
+          <div class="item">
+    
+        </div><!--item-->
+      </div><!--listcart-->
+      <button class="clearCart">Clear Cart</button><!--عشان امسح كل الحاجات اللي في الكارت -->
+      <div class="btn">
+        <button class="Close">CLOSE</button>
+        <button class="Purchase" onclick="checkoutMessage()">PURCHASE</button><!--لما هدوس عليه هنادي الفنكشن -->
+        </div>
+    </div>
+    <script src="script(Products).js"></script>
+</body>
+</html>

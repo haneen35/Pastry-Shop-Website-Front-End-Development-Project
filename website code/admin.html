@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Manage Pastries</title>
+    <link rel="icon" href="imgs/food-icons11_89016.ico" />
+    <link rel="stylesheet" href="style(Admin).css">
+    
+</head>
+<body>
+    <script src="script(Admin).js" defer></script>
+    <header>
+        <h1>Admin - Manage Pastries</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Add / edit / delete Product</h2>
+            <form onsubmit="event.preventDefault(); addProduct();">
+                <input type="text" id="product-name" placeholder="Product Name" required>
+                <input type="text" id="product-price" placeholder="Product Price" value=" EGP" required>
+                <input type="text" id="product-image" placeholder="Image URL" required>
+                <button id="add-button">Add Product</button>
+                <button id="update-button" style="display:none;">Update Product</button>
+            </form>
+        </section>
+        <section>
+            <h2>Existing Products</h2>
+            <ul id="product-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Pastry Delight. All rights reserved.</p>
+    </footer>
+</body>
+</html>

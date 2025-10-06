@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style(Registeration).css">
+    <link rel="icon" href="imgs/food-icons11_89016.ico">
+</head>
+<body>
+    <header>
+        <a href="home.html" class="logo">Pastry Delight</a>
+    </header>
+    
+    <section class="container">
+        <header>Registration Form</header>
+        <form id="registrationForm" class="form" action="#">
+            <div class="input-box" id="name-box">
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required />
+                <div class="error-message" id="name-error">Please enter a valid name</div>
+            </div>
+            
+            <div class="input-box" id="email-box">
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="Enter email address" required />
+                <div class="error-message" id="email-error">Please enter a valid email address</div>
+            </div>
+            
+            <div class="input-box" id="password-box">
+                <label>Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Enter password" required />
+                    <span class="toggle-password" id="togglePassword">👁️</span>
+                </div>
+                <div class="error-message" id="password-error">Password must be at least 8 characters</div>
+            </div>
+            
+            <div class="input-box" id="confirm-password-box">
+                <label>Confirm Password</label>
+                <div class="password-container">
+                    <input type="password" id="confirmPassword" placeholder="Confirm password" required />
+                    <span class="toggle-password" id="toggleConfirmPassword">👁️</span>
+                </div>
+                <div class="error-message" id="confirm-password-error">Passwords do not match</div>
+            </div>
+            
+            <div class="row">
+                <div class="input-box" id="phone-box">
+                    <label>Phone Number</label>
+                    <input type="number" id="phone" placeholder="Enter phone number" required />
+                    <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+                </div>
+                <div class="input-box" id="birthdate-box">
+                    <label>Birth Date</label>
+                    <input type="date" id="birthdate" required />
+                    <div class="error-message" id="birthdate-error">Please enter a valid birth date</div>
+                </div>
+            </div>
+            
+            <div class="gender-box">
+                <h3>Gender</h3>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input type="radio" id="check-male" name="gender" value="male" checked />
+                        <label for="check-male">Male</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-female" name="gender" value="female" />
+                        <label for="check-female">Female</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-other" name="gender" value="other" />
+                        <label for="check-other">Other</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-box address" id="address-box">
+                <label>Address</label>
+                <input type="text" id="street" placeholder="Enter street address" required />
+                <div class="error-message" id="street-error">Please enter a valid street address</div>
+                
+                <div class="row">
+                    <div class="input-box" id="country-box">
+                        <label>Country</label>
+                        <div class="select-box">
+                            <select id="country" required>
+                                <option value="" hidden>Country</option>
+                                <option>Egypt</option>
+                                <option>Japan</option>
+                                <option>USA</option>
+                                <option>UAE</option>
+                            </select>
+                        </div>
+                        <div class="error-message" id="country-error">Please select a country</div>
+                    </div>
+                    
+                    <div class="input-box" id="city-box">
+                        <label>City</label>
+                        <input type="text" id="city" placeholder="Enter your city" required />
+                        <div class="error-message" id="city-error">Please enter a valid city</div>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit">Submit</button>
+            
+            <div class="success-message" id="success-message">
+                Registration successful! Redirecting...
+            </div>
+        </form>
+        
+        <div class="logging">
+            <p>already have an account?</p>
+            <a href="login.html"> Login </a>
+        </div>
+    </section>
+    
+    <script>
+        const registeredUsers = []; // Stores all users
+        
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            resetErrors();
+
+            if (validateForm()) {
+                const user = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    password: document.getElementById('password').value,
+                    phone: document.getElementById('phone').value,
+                    birthdate: document.getElementById('birthdate').value,
+                    gender: document.querySelector('input[name="gender"]:checked').value,
+                    address: {
+                        street: document.getElementById('street').value,
+                        city: document.getElementById('city').value,
+                        country: document.getElementById('country').value
+                    }
+                };
+                
+                registeredUsers.push(user);
+                console.log('Registered Users:', registeredUsers);
+                
+                document.getElementById('success-message').style.display = 'block';
+                
+                setTimeout(() => {
+                    this.reset();
+                    document.getElementById('success-message').style.display = 'none';
+                }, 2000);
+            }
+        });
+
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.textContent = type === 'password' ? '👁️' : '🔒';
+        });
+
+        document.getElementById('toggleConfirmPassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('confirmPassword');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.textContent = type === 'password' ? '👁️' : '🔒';
+        });
+
+        // Real-time validation
+        document.getElementById('email').addEventListener('input', function() {
+            validateEmail();
+        });
+
+        document.getElementById('confirmPassword').addEventListener('input', function() {
+            validateConfirmPassword();
+        });
+
+        function validateForm() {
+            let isValid = true;
+            
+            if (!validateName()) isValid = false;
+            if (!validateEmail()) isValid = false;
+            if (!validatePassword()) isValid = false;
+            if (!validateConfirmPassword()) isValid = false;
+            if (!validatePhone()) isValid = false;
+            if (!validateBirthdate()) isValid = false;
+            if (!validateStreet()) isValid = false;
+            if (!validateCity()) isValid = false;
+            if (!validateCountry()) isValid = false;
+            
+            return isValid;
+        }
+
+        function validateName() {
+            const name = document.getElementById('name').value.trim();
+            const nameBox = document.getElementById('name-box');
+            
+            if (name.length < 2) {
+                document.getElementById('name-error').style.display = 'block';
+                nameBox.classList.add('invalid');
+                return false;
+            } else {
+                document.getElementById('name-error').style.display = 'none';
+                nameBox.classList.remove('invalid');
+                return true;
+            }
+        }
+
+        function validateEmail() {
+            const email = document.getElementById('email').value.trim();
+            const emailBox = document.getElementById('email-box');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailPattern.test(email)) {
+                document.getElementById('email-error').style.display = 'block';
+                emailBox.classList.add('invalid');
+                return false;
+            } else {
+                document.getElementById('email-error').style.display = 'none';
+                emailBox.classList.remove('invalid');
+                return true;
+            }
+        }
+
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            const passwordBox = document.getElementById('password-box');
+            
+            if (password.length < 8) {
+                document.getElementById('password-error').style.display = 'block';
+                passwordBox.classList.add('invalid');
+                return false;
+            } else {
+                document.getElementById('password-error').style.display = 'none';
+                passwordBox.classList.remove('invalid');
+                return true;
+            }
+        }
+
+        function validateConfirmPassword() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const confirmBox = document.getElementById('confirm-password-box');
+            
+            if (password !== confirmPassword) {
+                document.getElementById('confirm-password-error').style.display = 'block';
+                confirmBox.classList.add('invalid');
+                return false;
+            } else {
+                document.getElementById('confirm-password-error').style.display = 'none';
+                confirmBox.classList.remove('invalid');
+                return true;
+            }
+        }
+
+        function validatePhone() {
+            const phone = document.getElementById('phone').value;
+            const phoneBox = document.getElementById('phone-box');
+            
+            if (phone.length < 10) {
+                document.getElementById('phone-error').style.display = 'block';
+                phoneBox.classList.add('invalid');
+                return false;
+            } else {
+                document.getElementById('phone-error').style.display = 'none';
+                phoneBox.classList.remove('invalid');
+                return true;
+            }
+        }
+
+        function validateBirthdate() {
+            const birthdate = new Date(document.getElementById('birthdate').value);
+            const today = new Date();
+            const birthdateBox = document.getElementById('birthdate-box');
+            
+            if (birthdate >= today || isNaN(birthdate.getTime())) {
+                document.getElementById('birthdate-error').style.display = 'block';
+                birthdateBox.classList.add('invalid');
+                return false;
+            } else {
+                document.getElementById('birthdate-error').style.display = 'none';
+                birthdateBox.classList.remove('invalid');
+                return true;
+            }
+        }
+
+        function validateStreet() {
+            const street = document.getElementById('street').value.trim();
+            const streetBox = document.getElementById('address-box');
+            
+            if (street.length < 5) {
+                document.getElementById('street-error').style.display = 'block';
+                streetBox.classList.add('invalid');
+                return false;
+            } else {
+                document.getElementById('street-error').style.display = 'none';
+                streetBox.classList.remove('invalid');
+                return true;
+            }
+        }
+
+        function validateCity() {
+            const city = document.getElementById('city').value.trim();
+            const cityBox = document.getElementById('city-box');
+            
+            if (city.length < 2) {
+                document.getElementById('city-error').style.display = 'block';
+                cityBox.classList.add('invalid');
+                return false;
+            } else {
+                document.getElementById('city-error').style.display = 'none';
+                cityBox.classList.remove('invalid');
+                return true;
+            }
+        }
+
+        function validateCountry() {
+            const country = document.getElementById('country').value;
+            const countryBox = document.getElementById('country-box');
+            
+            if (!country) {
+                document.getElementById('country-error').style.display = 'block';
+                countryBox.classList.add('invalid');
+                return false;
+            } else {
+                document.getElementById('country-error').style.display = 'none';
+                countryBox.classList.remove('invalid');
+                return true;
+            }
+        }
+
+        function resetErrors() {
+            document.querySelectorAll('.error-message').forEach(msg => {
+                msg.style.display = 'none';
+            });
+            document.querySelectorAll('.input-box').forEach(box => {
+                box.classList.remove('invalid');
+            });
+        }
+    </script>
+</body>
+</html>
